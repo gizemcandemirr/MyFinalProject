@@ -10,7 +10,13 @@ namespace Business.Constants
 
         public static string ProductAdded = "Ürün Eklendi";
         public static string ProductNameInvalid = "Ürün İsmi geçersiz";
-        internal static string MaintenanceTime= "program bakımda";
-        internal static string ProductsListed= "ürünler listelendi";
+        public static string MaintenanceTime= "program bakımda";
+        public static string ProductsListed= "ürünler listelendi";
+        public static string ProductCountofCategoryError= "Bir Kategoride En Fazla 10 Ürün Olabilir";
+        public static string ProductNameAlreadyExists = "Bu isimle ürün zaten mevcut";
+        public static string CategoryLimitExceded = "Kategori Limiti Aşıldı";
+
+
+
     }
 }
