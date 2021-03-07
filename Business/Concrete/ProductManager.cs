@@ -30,9 +30,9 @@ namespace Business.Concrete
             _logger = logger;
             _categoryService = categoryService;
         }
-
-        [ValidationAspect(typeof(ProductValidator))]
         [SecuredOperation("product.add,admin")]
+        [ValidationAspect(typeof(ProductValidator))]
+     
         public IResult Add(Product product)
         {
             //validation: doğrulama
@@ -41,7 +41,7 @@ namespace Business.Concrete
           
             if(result != null)
             {
-                return null;
+                return result;
             }
             _productDal.Add(product);
             return new SuccessResult(Messages.ProductAdded);
